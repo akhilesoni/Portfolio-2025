@@ -1,0 +1,66 @@
+
+
+.taskbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--taskbar);
+    justify-content: space-between;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.taskbar .weather{
+ 
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 0 20px 0 5px;
+}
+
+
+.taskbar .weather img{
+    height: 25px;
+    margin-right: 8px;
+}
+
+.taskbar .weather p{
+    font-size: 14px;
+
+}
+
+.taskbar .weather span{
+    color: rgba(255, 255, 255, 0.69);
+    font-size: 13px;
+}
+
+
+
+
+.taskbar .info{
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+
+.taskbar .info div{
+    margin: 2px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+
+
+.taskbar .info .lang{
+    padding: 10px 5px;
+    font-weight: 600;
+}
+
+.taskbar .info .sysinfo{
+    padding: 10px 5px;
+}
+
+.taskbar .info .sysinfo span{
+    margin: 0 3px;
+}
