@@ -1,4 +1,6 @@
 import "../style/taskbar.css"
+import DateTime from "./taskbar/DateTime"
+import WeatherNews from "./taskbar/WeatherNews"
 
 export default function Taskbar(){
 
@@ -6,13 +8,7 @@ export default function Taskbar(){
 
     return(
         <div className="taskbar flex">
-            <div className="weather flex hover-white">
-                <img src="image/sun.png"/>
-                <div>
-                    <p>29 * c</p>
-                    <span>Sunny</span>
-                </div>
-            </div>
+            <WeatherNews/>
 
             <div className="apps">
                 facebook
@@ -28,10 +24,7 @@ export default function Taskbar(){
                     <span className="fa fa-battery"></span>
 
                 </div>
-                <div className="calender hover-white">
-                    <p>23:34</p>
-                    <p>09-02-2025</p>
-                </div>
+                <DateTime/>
             </div>
         </div>
     )

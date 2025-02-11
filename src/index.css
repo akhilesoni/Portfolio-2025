@@ -22,4 +22,7 @@ body{
 :root{
   --taskbar:rgb(33,33,33);
   --hover-white:rgba(255, 255, 255, 0.185);
+  --border:rgba(128, 128, 128, 0.444);
+  --blue:rgb(56, 156, 218);
+  
 }
