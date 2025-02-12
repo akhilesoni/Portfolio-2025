@@ -7,7 +7,7 @@ export default function Apps(){
 
     const data = apps
 
-    const [activeApp, setActiveApp] = useState("")
+    const [activeApp, setActiveApp] = useState("Chrome")
 
     return(
        <>
@@ -25,7 +25,7 @@ export default function Apps(){
 
                 <div className="flex">
                     {data.map( app => (
-                       <div>
+                       <div onClick={() => setActiveApp(app.name)}>
                          <AppIcon app={app} activeApp={activeApp}/>
                        </div>
                         
