@@ -1,5 +1,7 @@
 import "../style/taskbar.css"
+import Apps from "./taskbar/Apps"
 import DateTime from "./taskbar/DateTime"
+import Language from "./taskbar/Language"
 import WeatherNews from "./taskbar/WeatherNews"
 
 export default function Taskbar(){
@@ -10,14 +12,10 @@ export default function Taskbar(){
         <div className="taskbar flex">
             <WeatherNews/>
 
-            <div className="apps">
-                facebook
-            </div>
+            <Apps/>
 
             <div className="info flex">
-                <div className="lang hover-white">
-                    ENG IN
-                </div>
+                <Language/>
                 <div className="sysinfo hover-white">
                     <span className="fa fa-wifi"></span>
                     <span className="fa fa-volume-up"></span>

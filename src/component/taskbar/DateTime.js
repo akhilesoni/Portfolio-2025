@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Calendar from "react-calendar";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -10,6 +10,7 @@ export default function DateTime(){
 
     const [time, setTime] = useState(new Date());
     const [date, setDate] = useState(new Date());
+    const calendarRef = useRef(null); // Reference for the calendar div
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -24,6 +25,7 @@ export default function DateTime(){
         setCalendar(!calendar)
     }
 
+    
     return(
         <>
             <div onClick={openCalendar} className="calendar hover-white">
@@ -34,16 +36,20 @@ export default function DateTime(){
 
             <AnimatePresence>
                 {calendar && (
-                    <motion.div
-                    className="calendar-wrapper"
-                    initial={{ opacity: 0, x: 200 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0,  x: 200 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    >
-                    <p className="highlighted-date">{date.toDateString()}</p>
-                    <Calendar onChange={setDate} value={date} />
-                    </motion.div>
+                    <>
+                         <motion.div
+                            className="calendar-wrapper"
+                            initial={{ opacity: 0, x: 200 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0,  x: 200 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            >
+                            <p className="highlighted-date">{date.toDateString()}</p>
+                            <Calendar onChange={setDate} value={date} />
+                        </motion.div>
+                        <div onClick={() => setCalendar(false)} className={calendar? "cover" : ""}></div>
+
+                    </>
                 )}
             </AnimatePresence>
         </>

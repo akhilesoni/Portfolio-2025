@@ -1,0 +1,19 @@
+
+.apps{
+    align-items: center;
+
+}
+
+.apps .app-icon{
+    padding: 5px;
+    margin: 0 3px;
+    border-radius: 5px;
+}
+
+
+
+.apps .app-icon img{
+    height: 25px;
+
+}
+

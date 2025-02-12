@@ -1,0 +1,37 @@
+
+
+.lang-card{
+    position: fixed;
+    background-color: var(--taskbar);
+    border: 0.5px solid var(--border);
+    bottom: 60px;
+    right: 60px;
+    width: 280px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.lang-card .flex{
+    padding: 5px 15px;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+
+.lang-card h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.lang-card .flex div{
+    margin-left: 10px;
+}
+
+.lang-card .flex div p{
+    margin-bottom: 3px;
+}
+
+.lang-card .flex:hover{
+
+}
