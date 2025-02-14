@@ -3,7 +3,8 @@
   width: 100%;
   position: relative; /* ✅ Ensures child can move freely */
   overflow: hidden;
-  background-color: black; /* Just for visibility */
+  background-image: url("../public/image/wallpaper.jpg");
+  background-size: cover; /* Just for visibility */
 }
 
 

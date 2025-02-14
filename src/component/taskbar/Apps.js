@@ -2,6 +2,7 @@ import { useState } from "react"
 import { apps } from "../../model/apps"
 import "../../style/taskbar/apps.css"
 import AppIcon from "../AppIcon"
+import Chrome from "../Apps/Chrome"
 
 export default function Apps(){
 
@@ -25,8 +26,10 @@ export default function Apps(){
 
                 <div className="flex">
                     {data.map( app => (
-                       <div onClick={() => setActiveApp(app.name)}>
-                         <AppIcon app={app} activeApp={activeApp}/>
+                       <div onMouseDown={() => setActiveApp(app.name)}>
+                         <AppIcon app={app} activeApp={activeApp}>
+                            {app.app}
+                         </AppIcon>
                        </div>
                         
                     ))}
